@@ -1,0 +1,18 @@
+body{
+    background-color: white;
+    font-family: roboto;
+    margin : auto;
+    text-align: center;
+}
+
+.login-form, .contenedor{
+    width: 300px;
+    margin: 0 auto;
+}
+.login-form h1{
+    text-align: center;
+    color: midnightblue;
+    font-size: 28px;
+    padding: 70px 0 10px 0;
+
+}
