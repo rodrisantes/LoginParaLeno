@@ -19,12 +19,12 @@ router.post("/register", async (req, res) => {
   // const user = req.body.user
   // const name = req.body.name
   // const pass = req.body.pass
-  const { user, pass, name } = req.body;
+  const { user, pass, email } = req.body;
 
   let passwordHash = await bcryptjs.hash(pass, 8);
   connection.query(
     "INSERT INTO users SET ?",
-    { user: user, name: name, pass: passwordHash },
+    { user: user, email: email, pass: passwordHash },
     async (error, results) => {
       if (error) {
         console.log(error);
