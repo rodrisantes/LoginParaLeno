@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 const connection = require("../database/db");
 
 router.get("/", (req, res) => {
-  res.render("index", { msg: "Esto es un mensaje de NOdasfasfasfe" });
+  res.render("index", { msg: "Esto es un mensaje" });
 });
 
 router.get("/login", (req, res) => {
