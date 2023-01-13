@@ -11,7 +11,7 @@ router.post("/register", async (req, res) => {
 
   let passwordHash = await bcryptjs.hash(pass, 8);
   connection.query(
-    "INSERT INTO users SET ?",
+    "INSERT INTO userslogin SET ?",
     { user: user, email: email, pass: passwordHash },
     async (error, results) => {
       if (error) {
@@ -30,7 +30,7 @@ router.post("/auth", async (req, res) => {
 
   if (user && pass) {
     connection.query(
-      "SELECT * FROM users WHERE user = ?",
+      "SELECT * FROM userslogin WHERE user = ?",
       [user],
       async (error, results) => {
         if (
