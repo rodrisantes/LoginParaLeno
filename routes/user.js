@@ -3,18 +3,6 @@ const router = express.Router();
 const bcryptjs = require("bcryptjs");
 const connection = require("../database/db");
 
-router.get("/", (req, res) => {
-  res.render("index", { msg: "Esto es un mensaje" });
-});
-
-router.get("/login", (req, res) => {
-  res.render("login");
-});
-
-router.get("/register", (req, res) => {
-  res.render("register");
-});
-
 router.post("/register", async (req, res) => {
   // const user = req.body.user
   // const name = req.body.name
