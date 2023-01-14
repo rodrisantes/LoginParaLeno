@@ -17,6 +17,7 @@ router.post("/register", async (req, res) => {
       if (error) {
         console.log(error);
       } else {
+        res.header("Access-Control-Allow-Origin", "*")
         res.send("El usuario ha sido registrado con éxito");
         console.log("Usuario creado")
       }
