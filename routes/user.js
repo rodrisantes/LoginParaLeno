@@ -18,6 +18,7 @@ router.post("/register", async (req, res) => {
         console.log(error);
       } else {
         res.send("El usuario ha sido registrado con éxito");
+        console.log("Usuario creado")
       }
     }
   );
