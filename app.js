@@ -4,11 +4,13 @@ const app = express();
 const bcryptjs = require("bcryptjs");
 const session = require("express-session");
 const router = require("./routes/user");
+const cors = require("cors")
+
 
 const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 
-
+app.use(cors())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/resources", express.static("public"));
