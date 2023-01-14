@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
         res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE')
         res.header('Access-Control-Allow-Headers', 'Content-Type')
         res.header("Access-Control-Allow-Origin",  "*")
-        res.send("El usuario ha sido registrado con éxito");
+        res.send("El usuario fue registrado con éxito");
         console.log("Usuario creado")
       }
     }
